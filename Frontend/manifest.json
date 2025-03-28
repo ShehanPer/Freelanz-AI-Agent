@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Fiverr Chatbot",
+    "version": "1.0",
+    "description": "A personal chatbot for Fiverr page.",
+    "permissions": ["scripting", "storage", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "call-center-agent.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": ["styles.css", "call-center-agent.png"],
+          "matches": ["<all_urls>"]
+        }
+      ]
+  }
+  
