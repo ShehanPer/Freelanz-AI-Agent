@@ -37,13 +37,17 @@ The **Freelanz Assistance Chatbot** is a Microsoft Edge extension designed for *
 
 ```
 /project-root
-│── background.js     # Background script handling events
-│── manifest.json     # Extension metadata
-│── popup.html        # User interface (popup window)
-│── popup.js          # Handles popup actions
-│── styles.css        # Custom styling for UI
-│── assets/           # Images and icons
-│── backend/          # (Optional) Python backend server
+|──Frontend
+  │── background.js     # Background script handling events
+  │── manifest.json     # Extension metadata
+  │── popup.html        # User interface (popup window)
+  │── popup.js          # Handles popup actions
+  │── styles.css        # Custom styling for UI
+  │── agent.png         # Images and icons
+│── backend/            # Python backend server
+  |──app.py             # main backend sever 
+  |──firebase.py        # database handling
+  |──chatbot.py         # LLM model handling
 ```
 
 ---
